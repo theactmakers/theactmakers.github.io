@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { menu, close } from '../assets/icons';
 import { navLinks } from '../constants';
-import  {logo}  from '../assets/images'
+import { logo } from '../assets/images'
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     return (
-        <nav className='w-full xl:max-w-[1280px] flex py-6 justify-between items-center absolute m-auto left-0 right-0 z-20'>
-
+        <nav className='w-full xl:max-w-[1280px] navbar flex py-6 justify-between px-5 items-center absolute m-auto left-0 right-0 z-20 '>
+            <a href={`#`} className='xl:hidden'>
+                <img src={logo} alt="Ferrari" className="h-[64px]" />
+            </a>
             <ul className="text-xl list-none sm:flex hidden justify-center items-center flex-1">
                 <li className='font-poppins font-normal cursor-pointer  mr-16 hover:text-secondary text-white'>
                     <a href="#about">About</a>

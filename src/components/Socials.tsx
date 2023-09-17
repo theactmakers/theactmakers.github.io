@@ -1,5 +1,5 @@
 import styles, { layout } from '../style'
-import { social, insta, x,youtube } from '../assets/images'
+import { social, insta, x, youtube } from '../assets/images'
 
 
 
@@ -14,11 +14,8 @@ const Socials = () => {
       <div className={` flex-1 ${styles.flexStart} flex-col`}>
         <h2 className={styles.heading2}>Look At Our Socials</h2>
         <p className={`${styles.paragraph}  mt-5`}>
-          Connect with me on GitHub and LinkedIn to stay up-to-date
-          on my latest projects and professional achievements. My GitHub
-          profile showcases my coding skills and portfolio, while my LinkedIn
-          page highlights my work experience and skills. Don't hesitate to reach
-          out if you have any questions or if you'd like to collaborate on a project</p>
+          Stay connected with ACTUNKNOWN! Explore our social media profiles to stay updated with the latest news, game releases, and behind-the-scenes content. Join us on our social media journey and be a part of our gaming community.
+        </p>
         <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
           <a href="https://twitter.com/TheActmakers" target="_blank">
             <img src={x} className="mr-10 h-[42px] object-contain  cursor-pointer " alt="github mert patlar" />
@@ -27,7 +24,7 @@ const Socials = () => {
             <img src={insta} className="mr-10 h-[42px] object-contain  cursor-pointer" alt="linkedin mert patlar" />
           </a>
           <a href="https://www.youtube.com/@actunknown" target="_blank">
-            <img src={youtube} className="mr-10 h-[42px] object-contain  cursor-pointer" alt="linkedin mert patlar" />
+            <img src={youtube} className="mr-10 h-[42px] object-contain xl:mt-0 mt-5 cursor-pointer" alt="linkedin mert patlar" />
           </a>
         </div>
       </div>
@@ -37,3 +34,5 @@ const Socials = () => {
 }
 
 export default Socials
+
+

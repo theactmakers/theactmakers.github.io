@@ -5,16 +5,17 @@ export const navLinks = [
       title: "About"
     },
     {
-      id: "features",
-      title: "Features"
-    },
-    {
-      id: "current-job",
-      title: "Current Job"
+      id: "projects",
+      title: "Projects"
     },
     {
       id: "socials",
       title: "Socials"
     },
+    {
+      id: "mailto:business@actunknown.com",
+      title: "Contact"
+    },
   
   ];
+
