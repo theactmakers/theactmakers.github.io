@@ -24,7 +24,7 @@ const Socials = () => {
             <img src={insta} className="mr-10 h-[42px] object-contain  cursor-pointer" alt="linkedin mert patlar" />
           </a>
           <a href="https://www.youtube.com/@actunknown" target="_blank">
-            <img src={youtube} className="mr-10 h-[42px] object-contain xl:mt-0 mt-5 cursor-pointer" alt="linkedin mert patlar" />
+            <img src={youtube} className="mr-10 h-[42px] object-contain cursor-pointer" alt="linkedin mert patlar" />
           </a>
         </div>
       </div>

@@ -2,6 +2,8 @@ import styles from '../style'
 import { gameplay } from '../assets/videos'
 import OwlCarousel from 'react-owl-carousel';
 import { sim, sts1, sts2, sts3, sts4 } from '../assets/images'
+import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component';
+
 
 const images = [
     {
@@ -32,7 +34,6 @@ const images = [
 ]
 
 const options = {
-    loop: true,
     margin: 10,
     responsiveClass: true,
     nav: false,
@@ -53,6 +54,20 @@ const options = {
     }
 }
 
+const EmbedVideo = (props) => (
+    <div dangerouslySetInnerHTML={{
+        __html: `
+         <video
+           loop
+           muted
+           autoplay
+           playsinline
+           src="${props.src}"
+           class="${props.className}"
+         />,
+       ` }}></div>
+)
+
 
 const Projects = () => {
     return (
@@ -70,14 +85,22 @@ const Projects = () => {
                     <OwlCarousel className='owl-theme overflow-hidden max-w-[850px] w-full my-10' {...options}>
                         {images.map((image) => (
                             <div key={image.key}>
-                                <img src={image.src} alt={image.alt} className='rounded-xl' />
+                                <LazyLoadImage
+                                    alt={image.alt}
+                                    src={image.src} // use normal <img> attributes as props
+                                    className='rounded-xl'
+                                />
                             </div>
                         ))}
                     </OwlCarousel>
-                    <iframe src="https://store.steampowered.com/widget/2563580/" frameBorder="0" className='w-full' height="190"></iframe>
+                    <LazyLoadComponent>
+                        <iframe src="https://store.steampowered.com/widget/2563580/" frameBorder="0" className='w-full' height="190"></iframe>
+                    </LazyLoadComponent>
                 </div>
                 <div className={`flex-initial  flex ${styles.flexEnd} md:ml-10 ml-0 md:mt-0 mt-10 relative flex-col `}>
-                    <video autoPlay loop muted src={gameplay} className='rounded-xl max-h-[700px]' ></video>
+                    <LazyLoadComponent>
+                        {EmbedVideo({ src: gameplay, className: 'rounded-xl max-h-[700px]' })}
+                    </LazyLoadComponent>
                 </div>
             </section>
 
